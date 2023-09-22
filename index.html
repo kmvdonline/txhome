@@ -1,12 +1,101 @@
 <h1>For Sale : 17213 Clover Dr, Celina, TX 75009</h1>
-<h2>
-<a href="https://www.google.com/maps/place/17213+Clover+Dr,+Celina,+TX+75009/@33.287707,-96.8436129,17z/data=!3m1!4b1!4m6!3m5!1s0x864c472e9a3d3455:0xab64e287389967db!8m2!3d33.287707!4d-96.841038!16s%2Fg%2F11rqn2n0p0?entry=ttu"> Google Map Location</a>
-</h2>
-<img src="images/front.jpeg" alt="front_view">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
 
-<p> 
-   <li>
-    8,274 sqft lot
-    4,100 sqlt living space
-    </li>
-</p>
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'housedetail')">HouseDetail</button>
+  <button class="tablinks" onclick="openCity(event, 'front')">FrontView</button>
+  <button class="tablinks" onclick="openCity(event, 'firstfloor')">1st-floor</button>
+  <button class="tablinks" onclick="openCity(event, 'secondFloor')">2nd-floor</button>
+</div>
+
+<div id="housedetail" class="tabcontent">
+<p>
+    8,274 sqft lot, 4,100 sqlt living space
+<p>
+</div>
+
+
+<div id="front" class="tabcontent">
+<img  src="https://github.com/kmvdonline/txhome/blob/main/images/front.jpeg?raw=true">
+</div>
+
+<div id="firstfloor" class="tabcontent">
+  <img  src="https://github.com/kmvdonline/txhome/blob/main/images/first_floor.png?raw=true">
+</div>
+
+<div id="secondFloor" class="tabcontent">
+  <img  src="https://github.com/kmvdonline/txhome/blob/main/images/second_floor.png?raw=true">
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+
+
+
+
+</body>
+</html>
+
+
